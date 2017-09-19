@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff9933"
+        android:id="@+id/relative">
+
+        <LinearLayout
+            android:id="@+id/boss_linear"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/boss_hour"
+                android:textSize="50pt"
+                android:textColor="@android:color/white"
+                android:text="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/boss_beep"
+                android:paddingLeft="4dp"
+                android:layout_gravity="center"
+                android:src="@drawable/peep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/boss_minute"
+                android:textColor="@android:color/white"
+                android:textSize="50pt"
+                android:text="30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/boss_am"
+                    android:textSize="18pt"
+                    android:textColor="@android:color/white"
+                    android:text="AM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/boss_sec"
+                    android:textSize="18pt"
+                    android:textColor="@android:color/white"
+                    android:text="45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/boss_count_tv"
+            android:textColor="@android:color/white"
+            android:textSize="22pt"
+            android:text="11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boss_linear"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAppTheme"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <TextView
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="18pt"
+        android:text="벨소리"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/no_bell_btn"
+                android:onClick="onClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/no_bell_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/bell_btn"
+                android:onClick="onClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/bell_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/music_btn"
+                android:onClick="onClick"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/music_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="13pt"
+                android:text="무음"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="13pt"
+                android:text="벨소리"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="13pt"
+                android:text="음악"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>

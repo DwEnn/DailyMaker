@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:gravity="center"
+    android:background="@color/colorAppTheme">
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="18pt"
+        android:text="간편 알람"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2" />
+    <ImageView
+        android:paddingRight="8dp"
+        android:layout_gravity="right"
+        android:src="@drawable/reset_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quick_reset_btn"
+        android:onClick="onClick"
+        android:layout_below="@+id/textView2"
+        android:layout_alignEnd="@+id/linear" />
+    <TextView
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/time_set_tv"
+        android:textColor="@android:color/white"
+        android:textSize="33pt"
+        android:text="+ 00 : 00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset_btn"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_below="@+id/time_set_tv"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/quick_1m"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/min_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/quick_5m"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/min_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/quick_10m"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/min_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/quick_ring"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/ring_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/quick_15m"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/min_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/quick_30m"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/min_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/quick_60m"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/min_60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/quick_vibrate"
+                android:onClick="onClick"
+                android:padding="4dp"
+                android:src="@drawable/vibrate_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:inputType="text"
+        android:id="@+id/quick_todo"
+        android:textSize="13pt"
+        android:textColor="@android:color/white"
+        android:hint="todo"
+        android:layout_below="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@+id/quick_alarm_edit"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/quick_ok"
+            android:onClick="onClick"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="18pt"
+            android:textColor="@android:color/white"
+            android:text="확인"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>

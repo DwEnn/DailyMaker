@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    style="@style/menu_popup">
+
+    <TextView
+        android:id="@+id/subset_copy"
+        android:text="알람 복사"
+        android:textSize="15pt"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:onClick="onClick"
+        android:id="@+id/subset_preview"
+        android:text="알람 미리보기"
+        android:textSize="15pt"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:onClick="onClick"
+        android:id="@+id/subset_delete"
+        android:text="알람 삭제"
+        android:textSize="15pt"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

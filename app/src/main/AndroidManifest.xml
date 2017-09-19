@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.prgoh.dailymaker">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MainActivity"/>
+        <activity android:name=".Activity.LoadingActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.AlarmSetActivity" />
+        <activity android:name=".Activity.SettingActivity" />
+        <activity android:name=".Dialog.QuickAlarmSetActivity" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Dialog.BellSetDialog" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Dialog.TimePickerDialog" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Dialog.LouderDialog" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Dialog.AutoCancelDialog" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Activity.MusicListActivity" />
+        <activity android:name=".Activity.RingListActivity" />
+        <activity android:name=".Dialog.HowToDialog" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Dialog.AlarmDialog" android:theme="@style/NoTitleDialog"/>
+        <activity android:name=".Activity.AlarmEditActivity" />
+        <activity android:name=".Activity.AlarmBossActivity" />
+
+        <receiver android:name=".Receiver.AlarmReceiver"
+            android:enabled="true">
+
+        </receiver>
+    </application>
+
+</manifest>

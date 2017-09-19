@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/alarm_card"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/textColor"
+        app:cardCornerRadius="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="20pt"
+                    android:textColor="@color/colorAppTheme"
+                    android:text="12 : 42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time_tv" />
+                <TextView
+                    android:textSize="10pt"
+                    android:textColor="@color/colorAppTheme"
+                    android:padding="5dp"
+                    android:text="AM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/time_tv"
+                    android:layout_alignBottom="@id/time_tv"
+                    android:id="@+id/textView" />
+                <!--<ImageView-->
+                    <!--android:src="@drawable/disable_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_toEndOf="@+id/textView" />-->
+                <Switch
+                    android:id="@+id/alarm_switch"
+                    android:checked="true"
+                    android:paddingRight="10dp"
+                    android:track="@drawable/switch_track_selector"
+                    android:thumb="@drawable/switch_thumb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/weekday"
+                    android:textColor="@color/colorAppTheme"
+                    android:textSize="13pt"
+                    android:text="월 목 금"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/todo_tv"
+                    android:textColor="@color/colorAppTheme"
+                    android:textSize="13pt"
+                    android:maxLength="8"
+                    android:ellipsize="end"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/todo_list_icon" />
+                <ImageView
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/todo_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/todo_list_icon" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+</layout>

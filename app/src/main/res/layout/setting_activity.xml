@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAppTheme">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_btn_setting"
+                android:onClick="onClick"
+                android:src="@drawable/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/title"
+                android:text="설정"
+                android:textSize="18pt"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18pt"
+                    android:text="볼륨 설정"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/setting_volume_seekbar"
+                android:paddingTop="4dp"
+                android:progress="40"
+                android:thumb="@drawable/seek_bar_thumb"
+                android:progressDrawable="@drawable/seek_bar_background"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:fadingEdge="vertical"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <LinearLayout
+                android:id="@+id/setting_louder_linear"
+                android:onClick="onClick"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18pt"
+                    android:text="볼륨 점점 크게"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/setting_louder_tv"
+                    android:textSize="13pt"
+                    android:textColor="@color/textColor"
+                    android:text="사용 안함"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginTop="10dp"
+                    android:fadingEdge="vertical"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/auto_cancel_linear"
+                android:onClick="onClick"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18pt"
+                    android:text="알람 자동 해제"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/auto_cancel_tv"
+                    android:textSize="13pt"
+                    android:textColor="@color/textColor"
+                    android:text="사용 안함"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginTop="10dp"
+                    android:fadingEdge="vertical"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/vacation_mode_linear"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvvvv"
+                    android:textSize="18pt"
+                    android:text="휴가 모드"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/vacation_check_box"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:checked="false"
+                    android:buttonTint="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentEnd="true" />
+                <View
+                    android:layout_marginTop="10dp"
+                    android:fadingEdge="vertical"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_below="@id/tvvvv" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

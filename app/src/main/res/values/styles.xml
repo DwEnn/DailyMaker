@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAppTheme</item>
+        <item name="colorPrimaryDark">@color/colorAppTheme</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:selectableItemBackground">@drawable/selectable_item</item>
+    </style>
+
+    <style name="NoTitleDialog" parent="Theme.AppCompat.Dialog">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="menu_label_style">
+        <item name="android:background">@drawable/popup_layout</item>
+        <item name="android:textColor">@color/colorAppTheme</item>
+    </style>
+
+    <style name="menu_popup">
+        <item name="android:background">@drawable/menu_popup_layout</item>
+    </style>
+
+</resources>

@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff9933"
+        tools:context="com.example.prgoh.weather.MainActivity">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/weather_main_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:textSize="18pt"
+                android:textColor="#333333"
+                android:text="날씨"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/gps_update"
+                android:src="@drawable/trans_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_gravity="center"
+                android:textSize="18pt"
+                android:textColor="@android:color/white"
+                android:text="2017년 6월 8일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/forground_local"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="24pt"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/time_layout"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/hour"
+                    android:textSize="40pt"
+                    android:textColor="@android:color/white"
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:paddingRight="5dp"
+                    android:id="@+id/beep"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/beep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/minute"
+                    android:textColor="@android:color/white"
+                    android:textSize="40pt"
+                    android:text="30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/am"
+                        android:textSize="15pt"
+                        android:textColor="@android:color/white"
+                        android:text="AM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/sec"
+                        android:textSize="15pt"
+                        android:textColor="@android:color/white"
+                        android:text="45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/forground_sky"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="226dp" />
+
+            <TextView
+                android:id="@+id/forground_temp"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="36pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/pop_layout"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/forground_state"
+                    android:textSize="24pt"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/umb"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+                <TextView
+                    android:id="@+id/forground_rain"
+                    android:textSize="24pt"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:paddingBottom="10dp"
+                android:onClick="onClick"
+                android:id="@+id/expand"
+                android:gravity="right|bottom"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:paddingRight="30dp"
+                android:text="시간별 △"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/time_per_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_per_temp1"
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_per_temp2"
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_per_temp3"
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_per_temp4"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="13pt" />
+
+                    <ImageView
+                        android:id="@+id/time_per_sky4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_per_temp5"
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky5"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"/>
+
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/time_per_time1"
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/time_per_time2"
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/time_per_time3"
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/time_per_time4"
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:paddingLeft="4dp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/time_per_time5"
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:id="@+id/time_per_rain1"
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/time_per_layout2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_temp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky6"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_temp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky7"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_temp8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky8"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/time_per_temp9"
+                        android:textColor="@android:color/white"
+                        android:textSize="13pt" />
+
+                    <ImageView
+                        android:id="@+id/time_per_sky9"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:textSize="13pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_temp10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/time_per_sky10"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"/>
+
+            <LinearLayout
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/time_per_time6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/time_per_time7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/time_per_time8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:paddingLeft="4dp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/time_per_time9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="1"
+                    android:textSize="13pt"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/time_per_time10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/umb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <TextView
+                        android:textSize="11pt"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/time_per_rain10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
+

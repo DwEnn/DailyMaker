@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppTheme">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/trans_activity"
+                android:src="@drawable/mini_alarm_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <TextView
+                android:id="@+id/title"
+                android:text="알람"
+                android:textSize="18pt"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/setting_btn"
+                android:src="@drawable/setting_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/alarm_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floating_menu"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        app:fab_addButtonColorNormal="@color/actionMenu"
+        app:fab_addButtonColorPressed="@color/actionBtn"
+        app:fab_labelStyle="@style/menu_label_style"
+        app:fab_labelsPosition="left"
+        android:layout_gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/manner_icon"-->
+            <!--app:fab_title="매너 모드"-->
+            <!--app:fab_icon="@drawable/manner_icon"-->
+            <!--app:fab_colorNormal="@color/actionBtn"-->
+            <!--app:fab_colorPressed="@color/actionBtn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quick_alarm_icon"
+            app:fab_title="간편 알람 설정"
+            app:fab_icon="@drawable/quick_icon"
+            app:fab_colorNormal="@color/actionBtn"
+            app:fab_colorPressed="@color/actionBtn"/>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/alarm_icon"
+            app:fab_title="알람 설정"
+            app:fab_icon="@drawable/alarm_icon"
+            app:fab_colorNormal="@color/actionBtn"
+            app:fab_colorPressed="@color/actionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+</layout>

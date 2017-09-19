@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAppTheme"
+    android:padding="10dp">
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textSize="18pt"
+        android:text="알람해제 방법"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="15pt"
+        android:text="기본"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@android:color/white"/>
+
+
+</LinearLayout>
+
+</layout>

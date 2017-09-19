@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorAppTheme">
+
+        <TextView
+            android:text="알람 자동 해제"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="18pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_disable"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_disable_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="사용 안함"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_1min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_1min_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="1분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_5min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_5min_radio"
+                android:padding="4dp"
+                android:clickable="false"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="5분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_10min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_10min_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="10분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_15min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_15min_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="15분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_20min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_20min_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="20분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_25min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_25min_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="25분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/auto_cancel_30min"
+            android:onClick="onClick"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/auto_cancel_30min_radio"
+                android:clickable="false"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="6dp"
+                android:textSize="15pt"
+                android:textColor="@android:color/white"
+                android:text="30분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

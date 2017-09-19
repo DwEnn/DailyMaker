@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAppTheme">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_btn_alarmset"
+                android:onClick="onClick"
+                android:src="@drawable/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/title"
+                android:text="알람 설정"
+                android:textSize="18pt"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/alarm_set_time_linear"
+                    android:onClick="onClick"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="18pt"
+                        android:text="시간 설정"
+                        android:textColor="@color/textColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/alarm_set_time_tv"
+                        android:textSize="13pt"
+                        android:textColor="@color/textColor"
+                        android:text="02 : 40 PM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:fadingEdge="vertical"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="18pt"
+                        android:text="요일 반복"
+                        android:textColor="@color/textColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/sun"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/sun"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/mon"
+                            android:onClick="onClick"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="15dp"
+                            android:background="@color/colorAppTheme"
+                            android:src="@drawable/mon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/thu"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="15dp"
+                            android:background="@color/colorAppTheme"
+                            android:src="@drawable/thu"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/wen"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="15dp"
+                            android:background="@color/colorAppTheme"
+                            android:src="@drawable/wen"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/thur"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="15dp"
+                            android:background="@color/colorAppTheme"
+                            android:src="@drawable/thur"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/fri"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="15dp"
+                            android:background="@color/colorAppTheme"
+                            android:src="@drawable/fri"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:id="@+id/sat"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="15dp"
+                            android:background="@color/colorAppTheme"
+                            android:src="@drawable/sat"
+                            android:onClick="onClick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:fadingEdge="vertical"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/alarm_set_bell_linear"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="18pt"
+                        android:text="벨소리"
+                        android:textColor="@color/textColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/alarm_set_bell_tv"
+                        android:textSize="13pt"
+                        android:textColor="@color/textColor"
+                        android:maxLines="1"
+                        android:ellipsize="marquee"
+                        android:text="기본 벨소리"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:fadingEdge="vertical"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/alarm_set_vibrate_linear"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/vibrate_tv"
+                        android:textSize="18pt"
+                        android:text="진동"
+                        android:textColor="@color/textColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:paddingRight="15dp"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:checked="true"
+                        android:buttonTint="@android:color/white"
+                        android:id="@+id/vibrate_check_box"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true" />
+                    <View
+                        android:layout_below="@+id/vibrate_tv"
+                        android:layout_marginTop="10dp"
+                        android:fadingEdge="vertical"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:id="@+id/view" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/alarm_set_boss_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/boss_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="알람보스"
+                        android:textColor="@color/textColor"
+                        android:textSize="18pt" />
+
+                    <CheckBox
+                        android:id="@+id/boss_check_box"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:buttonTint="@android:color/white"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:paddingRight="15dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="1.5dp"
+                        android:layout_below="@+id/boss_tv"
+                        android:background="@android:color/white"
+                        android:fadingEdge="vertical" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true">
+
+                    <EditText
+                        android:id="@+id/alarm_set_todo"
+                        android:textSize="18pt"
+                        android:inputType="text"
+                        android:hint="todo"
+                        android:background="@null"
+                        android:textColor="@color/textColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:fadingEdge="vertical"
+                        android:background="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/alarm_set_cancel_btn"
+                    android:onClick="onClick"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="18pt"
+                    android:text="취소"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/alarm_set_delete_btn"
+                    android:onClick="onClick"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="18pt"
+                    android:visibility="gone"
+                    android:text="삭제"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/alarm_set_ok_btn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:layout_weight="1"
+                    android:textSize="18pt"
+                    android:text="확인"
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>
